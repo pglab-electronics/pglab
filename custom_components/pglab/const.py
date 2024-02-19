@@ -13,11 +13,15 @@ _LOGGER = logging.getLogger(__name__)
 # Used to de-register the component create callback
 DISCONNECT_COMPONENT = {
     Platform.SWITCH: "pglab_disconnect_component_switch",
+    Platform.COVER: "pglab_disconnect_component_cover",
+    Platform.SENSOR: "pglab_disconnect_component_sensor",
 }
 
 # Used to create a new component entity
 CREATE_NEW_ENTITY = {
     Platform.SWITCH: "pglab_create_new_entity_switch",
+    Platform.COVER: "pglab_create_new_entity_cover",
+    Platform.SENSOR: "pglab_create_new_entity_sensor",
 }
 
 # The discovery instance
@@ -32,7 +36,7 @@ DISCOVERY_TOPIC = "pglab/discovery"
 CONF_DISCOVERY_PREFIX = "discovery_prefix"
 CONF_DISCOVERY_PAYLOAD = "payload"
 
-# Supperted platforms
+# Supported platforms
 PLATFORMS = [
     Platform.COVER,
     Platform.SENSOR,    
